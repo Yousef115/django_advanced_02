@@ -1,0 +1,17 @@
+<title> Create</title>
+
+<body>
+    <br>
+    <div class="card">
+        <h3 class="card-header">Create Store</h3>
+        <div class="card-body">
+            <p class="card-text">
+                <form action="{% url 'create' %}" method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="Create" class="btn btn-outline-success">
+                </form>
+            </p>
+        </div>
+    </div>
+</body>
